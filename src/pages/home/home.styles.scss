@@ -1,0 +1,330 @@
+.home {
+  height: 110vh;
+  position: relative;
+  left: 0;
+  overflow: hidden;
+
+  .shadow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    left: 0;
+    z-index: 40;
+    background: linear-gradient(to top, black, transparent);
+  }
+
+  .rickaAndMortyPresentationContainer {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logoImg {
+    position: absolute;
+    height: 200px;
+  }
+  .ship {
+    position: absolute;
+    height: 225px;
+    width: 300px;
+    top: 40%;
+    left: 60%;
+    z-index: 2;
+    filter: drop-shadow(0 0 0.75rem crimson);
+  }
+  .moon {
+    position: absolute;
+    height: 300px;
+    width: 290px;
+    top: 50%;
+    right: 10%;
+    background: transparent;
+    z-index: 1;
+    filter: drop-shadow(0 0 0.75rem crimson);
+  }
+
+  .earth {
+    position: absolute;
+    height: 500px;
+    width: 480px;
+    top: 50%;
+    left: 5%;
+    background: transparent;
+    filter: drop-shadow(0 0 0.75rem #a7c5eb);
+  }
+
+  .btnContainer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .crater {
+    position: absolute;
+    width: 100%;
+    bottom: -100px;
+    z-index: 2;
+  }
+}
+
+//RESPONSIVE
+
+@media (max-width: 1500px) {
+  .home {
+    .ship {
+      height: 200px;
+      width: 275px;
+      top: 40%;
+      left: 66%;
+    }
+    .moon {
+      height: 280px;
+      width: 270px;
+      top: 60%;
+      right: 10%;
+    }
+
+    .earth {
+      height: 430px;
+      width: 410px;
+      top: 53%;
+      left: 5%;
+    }
+  }
+}
+@media (max-width: 1249px) {
+  .home {
+    .logoImg {
+      height: 170px;
+    }
+    .ship {
+      height: 200px;
+      width: 275px;
+      top: 40%;
+      left: 66%;
+    }
+    .moon {
+      height: 280px;
+      width: 270px;
+      top: 60%;
+      right: 10%;
+    }
+
+    .earth {
+      height: 430px;
+      width: 410px;
+      top: 53%;
+      left: 5%;
+    }
+  }
+}
+@media (max-width: 1147px) {
+  .home {
+    .logoImg {
+      height: 170px;
+    }
+    .ship {
+      height: 180px;
+      width: 255px;
+      top: 40%;
+      left: 66%;
+    }
+    .moon {
+      height: 280px;
+      width: 270px;
+      top: 66%;
+      right: 7%;
+    }
+
+    .earth {
+      height: 470px;
+      width: 450px;
+      top: 55%;
+      left: 1%;
+    }
+  }
+}
+@media (max-width: 1043px) {
+  .home {
+    .logoImg {
+      height: 150px;
+    }
+    .ship {
+      height: 160px;
+      width: 235px;
+      top: 50%;
+      left: 66%;
+    }
+    .moon {
+      height: 250px;
+      width: 245px;
+      top: 69%;
+      right: 7%;
+    }
+
+    .earth {
+      height: 470px;
+      width: 450px;
+      top: 59%;
+      left: 1%;
+    }
+  }
+}
+@media (max-width: 790px) {
+  .home {
+    .logoImg {
+      height: 140px;
+    }
+    .ship {
+      height: 160px;
+      width: 235px;
+      top: 50%;
+      left: 66%;
+    }
+    .moon {
+      height: 230px;
+      width: 225px;
+      top: 75%;
+      right: 7%;
+    }
+
+    .earth {
+      height: 470px;
+      width: 450px;
+      top: 65%;
+      left: 0.4%;
+    }
+    .crater {
+      height: 270px;
+      bottom: -130px;
+    }
+  }
+}
+@media (max-width: 719px) {
+  .home {
+    .logoImg {
+      height: 120px;
+    }
+    .ship {
+      height: 140px;
+      width: 215px;
+      top: 55%;
+      left: 62%;
+    }
+    .moon {
+      height: 230px;
+      width: 225px;
+      top: 75%;
+      right: 7%;
+    }
+
+    .earth {
+      height: 470px;
+      width: 450px;
+      top: 65%;
+      left: 0.4%;
+      -moz-transform: rotate(19deg);
+      -o-transform: rotate(19deg);
+      -webkit-transform: rotate(19deg);
+      transform: rotate(19deg);
+    }
+    .crater {
+      height: 270px;
+      bottom: -130px;
+    }
+  }
+}
+@media (max-width: 654px) {
+  .home {
+    .logoImg {
+      height: 120px;
+    }
+    .ship {
+      height: 120px;
+      width: 185px;
+      top: 58%;
+      left: 57%;
+    }
+    .moon {
+      height: 210px;
+      width: 205px;
+      top: 78%;
+      right: 7%;
+    }
+
+    .earth {
+      height: 450px;
+      width: 430px;
+      top: 70%;
+      left: -30px;
+    }
+    .crater {
+      height: 270px;
+      bottom: -130px;
+    }
+  }
+}
+@media (max-width: 521px) {
+  .home {
+    .logoImg {
+      height: 115px;
+    }
+    .crater {
+      width: 140%;
+      height: 270px;
+      bottom: -130px;
+    }
+  }
+}
+@media (max-width: 466px) {
+  .home {
+    .ship {
+      height: 100px;
+      width: 155px;
+      top: 58%;
+      left: 10%;
+    }
+    .moon {
+      height: 210px;
+      width: 205px;
+      top: 76%;
+      right: 50%;
+    }
+    .crater {
+      height: 290px;
+    }
+    .earth {
+      height: 450px;
+      width: 430px;
+      top: 68%;
+      left: 130px;
+    }
+    .logoImg {
+      margin: 1px auto;
+      height: 100px;
+    }
+    .crater {
+      width: 140%;
+      height: 270px;
+      bottom: -130px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .home {
+    .ship {
+      display: none;
+    }
+  }
+}
+@media (max-width: 357px) {
+  .home {
+    .logoImg {
+      height: 70px;
+    }
+  }
+}

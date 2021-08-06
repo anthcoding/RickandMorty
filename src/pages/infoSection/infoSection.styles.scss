@@ -1,0 +1,351 @@
+.infoSection {
+  text-align: center;
+  position: relative;
+  height: 180vh;
+  width: 100%;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    to bottom,
+    #000000 10%,
+    #0a1931 60%,
+    #511281 100%
+  );
+
+  .cardBigContainer {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerImage {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 440px;
+    width: 100%;
+    z-index: 2;
+    margin-top: 300%;
+  }
+  .footerTextContainer {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    height: 10px;
+    width: 100%;
+    background-color: black;
+    color: #e4bad4;
+    z-index: 2;
+    font-family: "Shadows Into Light", cursive;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+  .buttonsContainer {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+    .button1 {
+      letter-spacing: 3px;
+      padding: 10px 30px;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: transparent;
+      font-family: "Shadows Into Light", cursive;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+      outline: none;
+      background-image: linear-gradient(-120deg, transparent 50%, #ffe227 50%);
+      background-size: 245%;
+      background-position: 100%;
+      transition: all 0.2s ease;
+      z-index: 5;
+
+      &:hover {
+        background-position: 0%;
+        transform: translateX(1rem);
+        transform: scale(1.1);
+        box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2), 0 9px 15px rgba(0, 0, 0, 0.2);
+        color: #150e56;
+      }
+      &:active {
+        transform: translateY(-1px) scale(1);
+      }
+    }
+
+    .button2 {
+      border: none;
+      padding: 10px 30px;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: transparent;
+      font-family: "Shadows Into Light", cursive;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+      outline: none;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.2);
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        #ffe227 50%
+      );
+      background-size: 245%;
+      transition: all 0.2s ease;
+      z-index: 5;
+
+      &:hover {
+        background-position: 100%;
+        box-shadow: 0 9px 15px rgba(0, 0, 0, 0.2), 0 9px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.1);
+        color: #150e56;
+      }
+      &:active {
+        transform: translateY(-1px) scale(1);
+      }
+    }
+    h3 {
+      cursor: default;
+      bottom: 27.5%;
+      margin: 0 60px;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      color: white;
+      font-family: "Shadows Into Light", cursive;
+      span {
+        color: #ffe227;
+      }
+    }
+  }
+}
+
+.gout {
+  position: absolute;
+  top: 93vh;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+  font-size: 0.5rem;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(190vh);
+  }
+}
+
+//RESPONSIVE
+
+@media screen and (max-width: 1602px) {
+  .infoSection {
+    height: 225vh;
+  }
+  @keyframes fall {
+    to {
+      transform: translateY(242vh);
+    }
+  }
+}
+
+@media screen and (max-width: 1261px) {
+  .infoSection {
+    height: 255vh;
+    @keyframes fall {
+      to {
+        transform: translateY(272vh);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1062px) {
+  .infoSection {
+    height: 225vh;
+    .footerImage {
+      width: 150%;
+      height: 430px;
+      left: -250px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(243vh);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .infoSection {
+    height: 225vh;
+    .footerImage {
+      width: 160%;
+      height: 450px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(242vh);
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .infoSection {
+    height: 338vh;
+    .footerImage {
+      width: 180%;
+      left: -260px;
+      height: 430px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(345vh);
+      }
+    }
+  }
+}
+@media screen and (max-width: 645px) {
+  .infoSection {
+    height: 290vh;
+    @keyframes fall {
+      to {
+        transform: translateY(305vh);
+      }
+    }
+  }
+}
+@media screen and (max-width: 504px) {
+  .infoSection {
+    height: 258vh;
+    .footerTextContainer {
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    .footerImage {
+      width: 230%;
+      left: -329px;
+      height: 450px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(275vh);
+      }
+    }
+  }
+}
+@media screen and (max-width: 376px) {
+  .infoSection {
+    .buttonsContainer {
+      margin-top: 0;
+      .button1 {
+        font-size: 1rem;
+        background-size: 440px;
+      }
+      .button2 {
+        font-size: 1rem;
+      }
+      h3 {
+        font-size: 1rem;
+        margin: 20px;
+      }
+    }
+    height: 240vh;
+    .footerImage {
+      width: 340%;
+      left: -529px;
+      height: 320px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(255vh);
+      }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .infoSection {
+    height: 312vh;
+    .infoSection {
+      .buttonsContainer {
+        margin-top: 0;
+        .button1 {
+          font-size: 0.8rem;
+          background-size: 440px;
+        }
+        .button2 {
+          font-size: 0.8rem;
+        }
+        h3 {
+          font-size: 1rem;
+          margin: 20px;
+        }
+      }
+    }
+    .footerImage {
+      width: 290%;
+      left: -409px;
+      height: 420px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(313vh);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-height: 1331px) {
+  .infoSection {
+    height: 200vh;
+    .footerImage {
+      width: 190%;
+      left: -269px;
+      height: 320px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(210vh);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 1367px) {
+  .infoSection {
+    height: 150vh;
+    .footerImage {
+      width: 150%;
+      left: -269px;
+      height: 320px;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(162vh);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-height: 1368px) {
+  .infoSection {
+    height: 180vh;
+    .footerImage {
+      left: 0;
+      height: 440px;
+      width: 100%;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(187vh);
+      }
+    }
+  }
+}

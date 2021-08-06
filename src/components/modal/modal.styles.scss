@@ -1,0 +1,234 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal {
+    font-family: "Shadows Into Light", cursive;
+    cursor: default;
+    position: fixed;
+    width: 70%;
+    height: 600px;
+    box-shadow: 1px 1px 1px black;
+    padding: 16px;
+    left: 15%;
+    top: 20%;
+    box-sizing: border-box;
+    z-index: 50;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    box-shadow: 10px 15px 30px 10px rgba(0, 0, 0, 0.2);
+    filter: drop-shadow(0 0 0.9rem #0a1931);
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 10%,
+      #0a1931 50%
+    );
+
+    .modalImg {
+      height: 70%;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 0.75rem #0a1931) contrast(155%);
+    }
+    .infoContainer {
+      margin-left: 5%;
+      height: 100%;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-size: 3.5rem;
+        padding: 0;
+        color: #eff8ff;
+        filter: drop-shadow(0 0 0.2rem #b8b5ff);
+      }
+      .infoRowsContainer {
+        .infoRows {
+          display: flex;
+          align-items: center;
+          .alive {
+            color: #ffcc29;
+            font-size: 2rem;
+            font-family: "Shadows Into Light", cursive;
+            filter: drop-shadow(0 0 0.75rem #ffcc29);
+          }
+          .dead {
+            color: #f55c47;
+            font-size: 2rem;
+            font-family: "Shadows Into Light", cursive;
+            filter: drop-shadow(0 0 0.75rem #f55c47);
+          }
+          h3 {
+            font-size: 2rem;
+          }
+          span {
+            font-size: 3rem;
+            color: #02475e;
+            filter: none;
+            margin-right: 10%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1121px) {
+    .modal {
+      display: flex;
+      flex-direction: column;
+      .infoContainer {
+        width: 100%;
+        display: inline;
+        h1 {
+          font-size: 2.8rem;
+        }
+        .infoRowsContainer {
+          padding-bottom: 40px;
+          width: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          .infoRows {
+            margin-right: 60px;
+            width: 100%;
+          }
+          h3 {
+            font-size: 1rem;
+          }
+          span {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 886px) {
+    .modal {
+      .infoContainer {
+        width: 100%;
+        display: inline;
+        padding-left: 20px;
+        h1 {
+          font-size: 2.5rem;
+          padding-bottom: 20px;
+        }
+        .infoRowsContainer {
+          .infoRows {
+            h3 {
+              font-size: 2rem;
+            }
+            span {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .modal {
+      .infoContainer {
+        h1 {
+          font-size: 2.3rem;
+        }
+        .infoRowsContainer {
+          .infoRows {
+            h3 {
+              font-size: 1.7rem;
+            }
+            span {
+              font-size: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 598px) {
+    .modal {
+      .infoContainer {
+        padding: 0;
+        h1 {
+          font-size: 2.3rem;
+        }
+        .infoRowsContainer {
+          .infoRows {
+            h3 {
+              font-size: 1.4rem;
+            }
+            span {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 510px) {
+    .modal {
+      .infoContainer {
+        h1 {
+          font-size: 2.1rem;
+        }
+        .infoRowsContainer {
+          grid-template-columns: 1fr;
+          grid-row-gap: 10px;
+          padding-left: 20%;
+          .infoRows {
+            h3 {
+              font-size: 1.2rem;
+            }
+            span {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 495px) {
+    .modal {
+      top: 10%;
+      .modalImg {
+        height: 50%;
+      }
+      .infoContainer {
+        h1 {
+          font-size: 2rem;
+          padding-bottom: 40px;
+        }
+        .infoRowsContainer {
+          .infoRows {
+            padding: 0;
+            .alive {
+              font-size: 1rem;
+            }
+            .dead {
+              font-size: 1rem;
+            }
+            h3 {
+              font-size: 1rem;
+            }
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

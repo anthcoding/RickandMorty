@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  z-index: 5;
+  width: 250px;
+  height: 250px;
+  background-color: transparent;
+  margin: 15px 10px;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4), 0 5px 5px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    transform: scale(1.02) translatey(-14px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.4);
+    opacity: 0.99;
+  }
+
+  .cardImage {
+    border-radius: 50%;
+
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.2s;
+    filter: contrast(155%) drop-shadow(10px 10px 0.9rem #511281);
+  }
+}
+
+.content {
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  h2 {
+    font-size: 2rem;
+    font-family: "Shadows Into Light", cursive;
+    filter: drop-shadow(0 0 0.75rem #77acf1);
+  }
+  .alive {
+    color: #ffcc29;
+    font-size: 2rem;
+    font-family: "Shadows Into Light", cursive;
+    filter: drop-shadow(0 0 0.75rem #ffcc29);
+  }
+  .dead {
+    color: #f55c47;
+    font-size: 2rem;
+    font-family: "Shadows Into Light", cursive;
+    filter: drop-shadow(0 0 0.75rem #f55c47);
+  }
+  .unknown {
+    color: #1b1717;
+    font-size: 2rem;
+    font-family: "Shadows Into Light", cursive;
+    filter: drop-shadow(0 0 0.75rem #1b1717);
+  }
+}
+//RESPONSIVE
+@media (max-width: 1602px) {
+  .card {
+    margin: 15px 5px;
+  }
+}
+
+@media (max-width: 1062px) {
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 860px) {
+  .card {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (max-width: 645px) {
+  .card {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 504px) {
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 376px) {
+  .card {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 357px) {
+  .card {
+    width: 110px;
+    height: 110px;
+  }
+}
